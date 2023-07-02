@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Builder
@@ -16,6 +17,7 @@ public class Tag {
     @EqualsAndHashCode.Exclude
     Long id;
     String tagname;
-    @ManyToMany
-    ArrayList<Article> articles = new ArrayList<>();
+    @ManyToMany(mappedBy = "tags")
+    @Builder.Default
+    List<Article> articles = new ArrayList<>();
 }

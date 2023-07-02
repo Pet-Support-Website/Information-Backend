@@ -6,6 +6,6 @@ import seniorproject.article.entity.Article;
 
 import java.util.List;
 
-public interface ArticleRepository extends JpaRepository<Article,String> {
+public interface ArticleRepository extends JpaRepository<Article,Long> {
     List<Article> findAll();
 }

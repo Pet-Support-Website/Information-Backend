@@ -26,6 +26,6 @@ public class ArticleDaoImpl implements ArticleDao{
 
     @Override
     public Article getArticle(Long id) {
-        return articleRepository.findById(String.valueOf(id)).orElse(null);
+        return articleRepository.findById(id).orElse(null);
     }
 }

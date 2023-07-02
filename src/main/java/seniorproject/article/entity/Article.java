@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Builder
@@ -18,6 +19,6 @@ public class Article {
     String title;
     String author;
     String content;
-    @ManyToMany(mappedBy = "articles")
-    ArrayList<Tag> tags;
+    @ManyToMany
+    List<Tag> tags;
 }

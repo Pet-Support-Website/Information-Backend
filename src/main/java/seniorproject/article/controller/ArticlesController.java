@@ -27,12 +27,13 @@ public class ArticlesController {
         page = page == null?1:page;
         Page<Article> pageOutput;
         pageOutput = articleService.getArticles(perPage,page);
+
         HttpHeaders responseHeader = new HttpHeaders();
         responseHeader.set("x-total-count",String.valueOf(pageOutput.getTotalElements()));
         return new ResponseEntity<>(ProjectMapper.INSTANCE.getArticlesDto(pageOutput.getContent()),responseHeader, HttpStatus.OK);
     }
 
-    @GetMapping("event/{id}")
+    @GetMapping("article/{id}")
     public ResponseEntity<?> getEvent(@PathVariable("id") Long id) {
         Article output = articleService.getArticle(id);
         if (output != null) {

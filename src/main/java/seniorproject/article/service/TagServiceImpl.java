@@ -7,13 +7,15 @@ import org.springframework.stereotype.Service;
 import seniorproject.article.dao.TagDao;
 import seniorproject.article.entity.Tag;
 
+import java.util.List;
+
 @Service
 public class TagServiceImpl implements TagService{
     @Autowired
     TagDao tagDao;
 
     @Override
-    public Page<Tag> getTags(Pageable pageRequest) {
-        return tagDao.getTags(pageRequest);
+    public List<Tag> getTags() {
+        return tagDao.getTags(Pageable.unpaged()).getContent();
     }
 }
