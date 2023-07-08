@@ -17,7 +17,7 @@ public class Article {
     @EqualsAndHashCode.Exclude
     Long id;
     String title;
-    String author;
+    String source;
     @Column(columnDefinition = "TEXT")
     String content;
     @ManyToMany

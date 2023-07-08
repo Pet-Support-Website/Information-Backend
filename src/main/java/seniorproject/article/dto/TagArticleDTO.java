@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 public class TagArticleDTO {
     Long id;
     String title;
-    String author;
+    String source;
     String content;
 }

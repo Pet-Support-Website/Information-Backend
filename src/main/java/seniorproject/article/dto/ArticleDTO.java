@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class ArticleDTO {
     Long id;
     String title;
-    String author;
+    String source;
     String content;
     ArrayList<ArticleTagDTO> tags;
 }
