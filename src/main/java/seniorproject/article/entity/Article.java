@@ -18,6 +18,7 @@ public class Article {
     Long id;
     String title;
     String author;
+    @Column(columnDefinition = "TEXT")
     String content;
     @ManyToMany
     List<Tag> tags;

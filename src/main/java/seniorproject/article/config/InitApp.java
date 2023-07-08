@@ -38,5 +38,16 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                         .build());
         dog.getArticles().add(tempArticle);
         general.getArticles().add(tempArticle);
+        tempTags = new ArrayList<>();
+        tempTags.add(dog);
+        tempTags.add(food);
+        tempArticle = articleRepository.save(Article.builder()
+                .title("Dog's Food")
+                .author("Author Name")
+                .content("• Puppies eight to 12 weeks old need four meals a day./n• Feed puppies three to six months old three meals a day./n• Feed puppies six months to one year two meals a day./n• When your dog reaches his first birthday, one meal a day is usually enough./n• For some dogs, including larger canines or those prone to bloat, it's better to feed two smaller meals./nPremium-quality dry food provides a well-balanced diet for adult dogs and may be mixed with water, broth or canned food. Your dog may enjoy cottage cheese, cooked egg or fruits and vegetables, but these additions should not total more than ten percent of his daily food intake./nPuppies should be fed a high-quality, brand-name puppy food (large breed puppy foods for large breeds). Please limit 'people food' however, because it can result in vitamin and mineral imbalances, bone and teeth problems and may cause very picky eating habits and obesity. Clean, fresh water should be available at all times, and be sure to wash food and water dishes frequently.")
+                .tags(tempTags)
+                .build());
+        dog.getArticles().add(tempArticle);
+        food.getArticles().add(tempArticle);
     }
 }
