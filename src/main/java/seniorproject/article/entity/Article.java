@@ -18,7 +18,7 @@ public class Article {
     Long id;
     String title;
     String source;
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "MEDIUMTEXT")
     String content;
     @ManyToMany
     List<Tag> tags;
