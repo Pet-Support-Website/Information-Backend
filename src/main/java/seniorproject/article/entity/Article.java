@@ -18,6 +18,7 @@ public class Article {
     Long id;
     String title;
     String source;
+    String imgUrl;
     @Column(columnDefinition = "MEDIUMTEXT")
     String content;
     @ManyToMany

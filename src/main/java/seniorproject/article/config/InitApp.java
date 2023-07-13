@@ -46,11 +46,15 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     }
 
     private void saveToDB(String[] v) {
-        if (Arrays.stream(v).toList().size() == 4){
+        if (Arrays.stream(v).toList().size() >= 4){
             String title = Arrays.stream(v).toList().get(0);
             String source = Arrays.stream(v).toList().get(1);
             String content = Arrays.stream(v).toList().get(2);
             String tags = Arrays.stream(v).toList().get(3);
+            String imageurls = null;
+            if (Arrays.stream(v).toList().size() > 4){
+                imageurls = Arrays.stream(v).toList().get(4);
+            }
             List<String> splitedTag = Arrays.stream(tags.split(", ")).toList();
             ArrayList<Tag> temptags = new ArrayList<>();
             splitedTag.forEach(t -> {
@@ -70,6 +74,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                     .source(source)
                     .content(content)
                     .tags(temptags)
+                    .imgUrl(imageurls)
                     .build());
             temptags.forEach(tt -> tt.getArticles().add(tempArticle));
         }

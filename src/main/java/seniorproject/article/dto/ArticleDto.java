@@ -11,10 +11,11 @@ import java.util.ArrayList;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ArticleDTO {
+public class ArticleDto {
     Long id;
     String title;
     String source;
     String content;
-    ArrayList<ArticleTagDTO> tags;
+    ArrayList<ArticleTagDto> tags;
+    String imgUrl;
 }

@@ -20,7 +20,7 @@ public class ArticlesController {
     ArticleService articleService;
 
     @GetMapping("article")
-    public ResponseEntity<?> getArticleLists(@RequestParam(value = "_limit", required = false) Integer perPage
+    public ResponseEntity<?> getArticleList(@RequestParam(value = "_limit", required = false) Integer perPage
             , @RequestParam(value = "_page", required = false) Integer page
     ) {
         perPage = perPage == null?3:perPage;
@@ -34,7 +34,7 @@ public class ArticlesController {
     }
 
     @GetMapping("article/{id}")
-    public ResponseEntity<?> getEvent(@PathVariable("id") Long id) {
+    public ResponseEntity<?> getArticle(@PathVariable("id") Long id) {
         Article output = articleService.getArticle(id);
         if (output != null) {
             return ResponseEntity.ok(ProjectMapper.INSTANCE.getArticleDto(output));

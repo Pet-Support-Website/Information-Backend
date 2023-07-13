@@ -5,13 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TagArticleDTO {
+public class TagDto {
     Long id;
-    String title;
-    String source;
-    String content;
+    String tagname;
+    ArrayList<TagArticleDto> articles = new ArrayList<>();
 }
