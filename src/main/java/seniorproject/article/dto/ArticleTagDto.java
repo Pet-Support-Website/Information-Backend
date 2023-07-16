@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ArticleTagDTO {
+public class ArticleTagDto {
     Long id;
     String tagname;
 }

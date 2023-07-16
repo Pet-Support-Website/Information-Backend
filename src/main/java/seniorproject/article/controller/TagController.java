@@ -14,6 +14,6 @@ public class TagController {
 
     @GetMapping("/tags")
     ResponseEntity<?> getTags() {
-        return ResponseEntity.ok(ProjectMapper.INSTANCE.getTagsDTO(tagService.getTags()));
+        return ResponseEntity.ok(ProjectMapper.INSTANCE.getTagsDto(tagService.getTags()));
     }
 }

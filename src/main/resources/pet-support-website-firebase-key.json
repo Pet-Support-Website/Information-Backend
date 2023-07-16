@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pet-support-website",
+  "private_key_id": "556585d41c986c07e4e9505562324b9ae1502216",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCvnUsXYqNIOuXE\nwDgPesiU/Da2/6DrfdLXQW6tetyM0h0bjqPxN/y0yqmbZDY4GqQUly6HdHhmWtpp\nqdI4x5FvbVmOoMpKzSF8pcZ4UvLGIVhzsOTkDiK/V/iJ/e/Q5HATMNrV1ZjKqCnx\n2KMYC8jygGAjXJ0K1TJbtsoM+w/u/EKmfH2+FdSaGnIfAFvl1g9yj29fSzETCI91\n6wcWq3sJ9AX6h4a4LIiFLmrmFBEhrA8tw+T17r607EVerzd2jv9WNHoiM8qSUDv1\nVd4NX6i0Kbj1fEir8h4LsqJ27cg2g6Agl8z+/PlsDU/HKS0YBi5fUhVSzLR23duw\n/l+uJ7zTAgMBAAECggEAI25qVJUHmY6chgY8KU9eAcUjKufHaUvRCrH+aQzlS5om\n2kT8qbHgj/9lmd7tm4MwgKEB971Vf10sPO5Q5jjJjIA09fRV7CKX84Sk1ujxZ20Z\n4fmaLLL3asCOehTcWjqErDKKrGL0eUrVb6CEQ1k5WUfyXaAVZTafeuaVvGm5DL/N\ndQSZ/9li0ZHuT/SDnV8nWLZAWniHVvrE0KsUr9D5GdtgrKjUFEvBFum63ehBPTT2\n/7l1WIZIZOVzfj0ac6o3TJxFyZNATnmEGLfb6iKEVm3uNzkXwQoqdogYBwoCjuj6\nh0PKmuwLN27uFpHiDM/uOqQsv49C11EO72WpP9clhQKBgQDuOAabxOAmKFsCyW+L\nXiMIaXo47LYs3gVX6b1V4wQjiDwKG+BgBA0NS1ebcGho/f9wMeivm7G91xNhlxI6\ndRWU2541QIUBWeHTFDbVLDhXENx9Ao+c2hYNVspsVnHLn+QiF4g1rTgimZPC9OOn\nVtjXoWFHSv2hHfwNBtw90rXq7QKBgQC8uP+7dLIrQ+B8fgEdyE00PvFusk0dE3e3\nOXh3iYapg2TRf2MrmXnSW0ni6iww9EPdXHBr+s5FI7RZH2nI3I81FbIcsPNV8Ofe\ngJGwBckqzQds7dsLIY97pxUPVa2Ck8kybRyufYWQnq50E/4qWQtv4XhGglMg91MB\nfOeBJtaOvwKBgBmK0lKTaoFM5G1JEfe8kT8OqDdAUkw/Rg1mF5IE9GWm7uEamhVR\neeDKCku1YsyXJ3NtNojVxdoYHJDjNOYltbmvTqhhEaHSdF9AlJyI0EWtniadRq7H\nx4OIoc25+xudOkXZhhZTS2iSVQCbZ2mC6187g4W0abuDzonLCYRremwFAoGBAKHY\n1hhhP9sy3vZk6XgtK2i/Aja42sEwzN5pfxKk8sO1V2UDJn1hpcPtXjQoN7XUBc91\nU0SHVxacRDKaahJEdNxFuvY4Grd9XpzHDiozDA6UvuWAJvYo1fBpnfoEtETjkQyZ\n3psWMtGQBHSwIK0YqGJOruNpKPmAocMI51EviZnpAoGBALxRBMlJhvpYS/iXQ7wM\n0vEGz3fBbV6vjToAG3EhNXfPv0+/ieElk3C3ryeBGq5S4B4O7Z0MQskhm2q5DRrc\ntnH1dRVYwrTyUoUEb2YbWx9OjE/NAGiUxPxUh7iY75M7OnYD+Sg/mn9fS8DOJk1E\n/aGgoW6PUvuQOb5MlrDkRmCg\n-----END PRIVATE KEY-----\n",
+  "client_email": "pet-support-website@appspot.gserviceaccount.com",
+  "client_id": "110205303902588014533",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pet-support-website%40appspot.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
