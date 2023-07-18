@@ -31,7 +31,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     @Override
     @Transactional
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
-        ClassPathResource DataFile = new ClassPathResource("pet data table V.0.3.csv");
+        ClassPathResource DataFile = new ClassPathResource("pet data table V.1.0.csv");
         try {
             FileReader fileReader = new FileReader(DataFile.getFile());
             CSVReaderHeaderAware csvReader = new CSVReaderHeaderAware(fileReader);
