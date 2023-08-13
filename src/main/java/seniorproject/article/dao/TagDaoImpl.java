@@ -16,4 +16,9 @@ public class TagDaoImpl implements TagDao{
     public Page<Tag> getTags(Pageable pageRequest) {
         return tagRepository.findAll(pageRequest);
     }
+
+    @Override
+    public Page<Tag> searchTags(String tagname, Pageable pageable) {
+        return tagRepository.findByTagname(tagname, pageable);
+    }
 }

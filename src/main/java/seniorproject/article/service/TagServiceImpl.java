@@ -18,4 +18,9 @@ public class TagServiceImpl implements TagService{
     public List<Tag> getTags() {
         return tagDao.getTags(Pageable.unpaged()).getContent();
     }
+
+    @Override
+    public Page<Tag> searchTags(String tagname, Pageable pageable) {
+        return tagDao.searchTags(tagname, pageable);
+    }
 }

@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface TagService {
     List<Tag> getTags();
+    Page<Tag> searchTags(String tagname, Pageable pageable);
 }

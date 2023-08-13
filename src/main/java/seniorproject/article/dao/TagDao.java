@@ -6,4 +6,6 @@ import seniorproject.article.entity.Tag;
 
 public interface TagDao {
     Page<Tag> getTags(Pageable pageRequest);
+
+    Page<Tag> searchTags(String tagname, Pageable pageable);
 }
