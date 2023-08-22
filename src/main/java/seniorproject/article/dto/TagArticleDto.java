@@ -14,4 +14,5 @@ public class TagArticleDto {
     String title;
     String source;
     String content;
+    String imgUrl;
 }
