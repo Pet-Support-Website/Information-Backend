@@ -8,4 +8,5 @@ public interface ArticleDao {
     Integer getArticleSize();
     Page<Article> getArticles(Integer pageSize, Integer page);
     Article getArticle(Long id);
+    Page<Article> searchTitle(String title, Pageable pageable);
 }

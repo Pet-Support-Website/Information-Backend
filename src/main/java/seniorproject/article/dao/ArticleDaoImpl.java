@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 import seniorproject.article.entity.Article;
 import seniorproject.article.repository.ArticleRepository;
@@ -27,5 +28,10 @@ public class ArticleDaoImpl implements ArticleDao{
     @Override
     public Article getArticle(Long id) {
         return articleRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Page<Article> searchTitle(String title, Pageable pageable) {
+        return articleRepository.findByTitleContainingIgnoreCase(title, pageable);
     }
 }

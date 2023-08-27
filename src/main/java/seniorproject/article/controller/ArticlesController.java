@@ -2,6 +2,7 @@ package seniorproject.article.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
 import seniorproject.article.entity.Article;
+import seniorproject.article.entity.Tag;
 import seniorproject.article.service.ArticleService;
 import seniorproject.article.util.ProjectMapper;
 
@@ -41,5 +43,15 @@ public class ArticlesController {
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The given id is not found");
         }
+    }
+    @GetMapping("/searchTitle")
+    ResponseEntity<?> searchTitle(@RequestParam(value = "_title", required = false) String title) {
+        Integer perPage = 100;
+        Integer page = 0;
+        Page<Article> pageoutput;
+        pageoutput = articleService.searchTitle(title, PageRequest.of(page, perPage));
+        HttpHeaders responseHeader = new HttpHeaders();
+        responseHeader.set("x-total-count", String.valueOf(pageoutput.getTotalElements()));
+        return new ResponseEntity<>(ProjectMapper.INSTANCE.getArticlesDto(pageoutput.getContent()), responseHeader, HttpStatus.OK);
     }
 }
