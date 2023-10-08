@@ -20,7 +20,7 @@ public class TagController {
 
     @GetMapping("/tags")
     ResponseEntity<?> getTags() {
-        return ResponseEntity.ok(ProjectMapper.INSTANCE.getTagsDto(tagService.getTags()));
+        return ResponseEntity.ok(ProjectMapper.INSTANCE.getTagsNameDto(tagService.getTags()));
     }
 
     @GetMapping("/searchTags")

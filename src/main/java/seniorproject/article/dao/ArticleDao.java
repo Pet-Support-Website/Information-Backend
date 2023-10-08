@@ -9,4 +9,5 @@ public interface ArticleDao {
     Page<Article> getArticles(Integer pageSize, Integer page);
     Article getArticle(Long id);
     Page<Article> searchTitle(String title, Pageable pageable);
+    Article save(Article article);
 }

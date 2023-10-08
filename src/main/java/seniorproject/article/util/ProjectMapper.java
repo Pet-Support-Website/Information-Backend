@@ -4,6 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 import seniorproject.article.dto.ArticleDto;
 import seniorproject.article.dto.TagDto;
+import seniorproject.article.dto.TagNameDto;
 import seniorproject.article.entity.Article;
 import seniorproject.article.entity.Tag;
 
@@ -20,4 +21,6 @@ public interface ProjectMapper {
     TagDto getTagDto(Tag tag);
 
     List<TagDto> getTagsDto(List<Tag> tags);
+
+    List<TagNameDto> getTagsNameDto(List<Tag> tags);
 }

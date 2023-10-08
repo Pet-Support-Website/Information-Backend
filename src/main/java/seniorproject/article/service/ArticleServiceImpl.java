@@ -30,4 +30,9 @@ public class ArticleServiceImpl implements ArticleService{
     public Page<Article> searchTitle(String title, Pageable pageable) {
         return articleDao.searchTitle(title, pageable);
     }
+
+    @Override
+    public Article save(Article article) {
+        return articleDao.save(article);
+    }
 }

@@ -34,4 +34,9 @@ public class ArticleDaoImpl implements ArticleDao{
     public Page<Article> searchTitle(String title, Pageable pageable) {
         return articleRepository.findByTitleContainingIgnoreCase(title, pageable);
     }
+
+    @Override
+    public Article save(Article article) {
+        return articleRepository.save(article);
+    }
 }
