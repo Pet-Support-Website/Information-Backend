@@ -11,4 +11,5 @@ public interface ArticleService {
     Page<Article> searchTitle(String title, Pageable pageable);
     Article save(Article article);
     boolean deleteById(Long id);
+    Integer updateArticle(Article article);
 }

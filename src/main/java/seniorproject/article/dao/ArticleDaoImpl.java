@@ -51,4 +51,11 @@ public class ArticleDaoImpl implements ArticleDao{
         }
         return tempArticle != null;
     }
+
+    @Override
+    public Integer updateArticle(Article article) {
+        Integer i = articleRepository.setArticleById(article.getTitle(), article.getSource(), article.getContent(), article.getId());
+        return i;
+    }
+
 }

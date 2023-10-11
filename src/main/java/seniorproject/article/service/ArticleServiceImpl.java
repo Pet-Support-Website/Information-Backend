@@ -40,4 +40,9 @@ public class ArticleServiceImpl implements ArticleService{
     public boolean deleteById(Long id) {
         return articleDao.deleteById(id);
     }
+
+    @Override
+    public Integer updateArticle(Article article) {
+        return articleDao.updateArticle(article);
+    }
 }

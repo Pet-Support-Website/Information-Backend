@@ -62,11 +62,21 @@ public class ArticlesController {
 
     @PostMapping("/deleteArticle")
     public ResponseEntity<?> deleteArticle(@RequestBody Article article) {
-        ResponseEntity<ArticleDto> output = null;
-        if (articleService.deleteById(article.getId())) {
-            output = ResponseEntity.ok(ProjectMapper.INSTANCE.getArticleDto(article));
-            System.out.println(output);
+        Article output = null;
+        if(articleService.deleteById(article.getId())){
+            output = article;
         }
-        return output;
+        System.out.println(output);
+        return ResponseEntity.ok(ProjectMapper.INSTANCE.getArticleDto(output));
+    }
+
+    @PostMapping("/updateArticle")
+    public ResponseEntity<?> updateArticle(@RequestBody Article article) {
+        Article output = null;
+        if(articleService.updateArticle(article)>0){
+            output = article;
+        }
+        System.out.println(output);
+        return ResponseEntity.ok(ProjectMapper.INSTANCE.getArticleDto(output));
     }
 }
