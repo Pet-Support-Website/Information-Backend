@@ -29,7 +29,7 @@ public class CloudStorageHelper {
             serviceAccount = new ClassPathResource("pet-support-photos-firebase-adminsdk-v2.json").getInputStream();
             storage = StorageOptions.newBuilder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                    .setProjectId("pet support website")
+                    .setProjectId("pet-support-photos")
                     .build().getService();
         } catch (IOException e) {
             e.printStackTrace();

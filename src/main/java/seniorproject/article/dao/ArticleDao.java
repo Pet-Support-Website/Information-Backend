@@ -10,4 +10,6 @@ public interface ArticleDao {
     Article getArticle(Long id);
     Page<Article> searchTitle(String title, Pageable pageable);
     Article save(Article article);
+
+    boolean deleteById(Long id);
 }

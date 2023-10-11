@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 import seniorproject.article.entity.Article;
 import seniorproject.article.repository.ArticleRepository;
 
+import java.util.Optional;
+
 @Profile("db")
 @Repository
 public class ArticleDaoImpl implements ArticleDao{
@@ -38,5 +40,15 @@ public class ArticleDaoImpl implements ArticleDao{
     @Override
     public Article save(Article article) {
         return articleRepository.save(article);
+    }
+
+    @Override
+    public boolean deleteById(Long id) {
+        Optional<Article> tempArticle = null;
+        tempArticle = articleRepository.findById(id);
+        if (tempArticle != null){
+            articleRepository.deleteById(id);
+        }
+        return tempArticle != null;
     }
 }

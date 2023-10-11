@@ -35,4 +35,9 @@ public class ArticleServiceImpl implements ArticleService{
     public Article save(Article article) {
         return articleDao.save(article);
     }
+
+    @Override
+    public boolean deleteById(Long id) {
+        return articleDao.deleteById(id);
+    }
 }

@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import seniorproject.article.dto.ArticleDto;
 import seniorproject.article.entity.Article;
 import seniorproject.article.entity.Tag;
 import seniorproject.article.service.ArticleService;
@@ -52,9 +53,20 @@ public class ArticlesController {
         responseHeader.set("x-total-count", String.valueOf(pageoutput.getTotalElements()));
         return new ResponseEntity<>(ProjectMapper.INSTANCE.getArticlesDto(pageoutput.getContent()), responseHeader, HttpStatus.OK);
     }
-    @PostMapping("/event")
-    public ResponseEntity<?> addEvent(@RequestBody Article article) {
+    @PostMapping("/addArticle")
+    public ResponseEntity<?> addArticle(@RequestBody Article article) {
         Article output = articleService.save(article);
+        System.out.println(output);
         return ResponseEntity.ok(ProjectMapper.INSTANCE.getArticleDto(output));
+    }
+
+    @PostMapping("/deleteArticle")
+    public ResponseEntity<?> deleteArticle(@RequestBody Article article) {
+        ResponseEntity<ArticleDto> output = null;
+        if (articleService.deleteById(article.getId())) {
+            output = ResponseEntity.ok(ProjectMapper.INSTANCE.getArticleDto(article));
+            System.out.println(output);
+        }
+        return output;
     }
 }
